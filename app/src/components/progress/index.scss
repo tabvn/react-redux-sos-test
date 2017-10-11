@@ -1,0 +1,315 @@
+@import "../../css/variable";
+
+$pg-default-bg: #EEE;
+// Progress bar bg colours
+$bar-default-bg: #3798d9;
+$bar-info-bg: #9575cd;
+$bar-danger-bg: #ef5350;
+$bar-success-bg: #66bb6a;
+$bar-warning-bg: #ffb74d;
+
+@mixin browser_prefix($property, $value) {
+  -webkit-#{$property}: #{$value};
+  -moz-#{$property}: #{$value};
+  -ms-#{$property}: #{$value};
+  -o-#{$property}: #{$value};
+  #{$property}: #{$value};
+}
+
+// KEYFRAMES
+@mixin keyframes($animation-name) {
+  @-webkit-keyframes #{$animation-name} {
+    @content;
+  }
+  @-moz-keyframes #{$animation-name} {
+    @content;
+  }
+  @-ms-keyframes #{$animation-name} {
+    @content;
+  }
+  @-o-keyframes #{$animation-name} {
+    @content;
+  }
+  @keyframes #{$animation-name} {
+    @content;
+  }
+}
+
+// ANIMATION
+@mixin animation($str) {
+  @include browser_prefix('animation', $str);
+}
+
+@mixin app-progress-barGlowActive($name, $color) {
+  @include keyframes($name) {
+    0%, 100% {
+      box-shadow: 5px 0px 15px 0px #{$color};
+    }
+    45% {
+      box-shadow: 1px 0px 4px 0px #{$color};
+    }
+  }
+}
+
+/* -----------------------------------------------------
+	CSS Progress Bars
+-------------------------------------------------------- */
+.app-progress-bar {
+  width: 100%;
+  margin-bottom: 20px;
+  .progress1,
+  .progress2,
+  .progress3 {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+  }
+
+  .app-progress-bar-bar {
+    display: block;
+    float: left;
+    width: 0%;
+    height: 100%;
+    background: $bar-default-bg;
+    box-shadow: inset 0px -1px 2px rgba(0, 0, 0, 0.1);
+    transition: width 0.8s ease-in-out;
+  }
+
+  .app-progress-bar-label {
+    position: absolute;
+    overflow: hidden;
+    left: 0px;
+    right: 0px;
+    color: rgba(0, 0, 0, 0.6);
+    font-size: 12px;
+    text-align: center;
+    text-shadow: 0px 1px rgba(0, 0, 0, 0.3);
+  }
+
+  .app-progress-bar-info {
+    background-color: $bar-info-bg !important;
+  }
+  .app-progress-bar-danger {
+    background-color: $bar-danger-bg !important;
+  }
+  .app-progress-bar-success {
+    background-color: #19B5FE !important;
+  }
+  .app-progress-bar-warning {
+    background-color: $bar-warning-bg !important;
+  }
+
+  .app-progress-bar-right {
+    float: right !important;
+  }
+
+  .app-progress-bar-label-left {
+    margin-left: 10px;
+    text-align: left !important;
+  }
+
+  .app-progress-bar-label-right {
+    margin-right: 10px;
+    text-align: right !important;
+  }
+
+  .app-progress-bar-label2 {
+    display: block;
+    margin: 2px 0;
+    padding: 0 8px;
+    font-size: 0.8em;
+
+    &.app-progress-bar-label2-right {
+      text-align: right;
+    }
+    &.app-progress-bar-label2-center {
+      text-align: center;
+    }
+  }
+
+  .app-progress-bar-stripes,
+  .app-progress-bar-active,
+  .app-progress-bar-active-right {
+    background-image: linear-gradient(
+                    -45deg,
+                    rgba(255, 255, 255, .125) 25%,
+                    transparent 25%,
+                    transparent 50%,
+                    rgba(255, 255, 255, .125) 50%,
+                    rgba(255, 255, 255, .125) 75%,
+                    transparent 75%,
+                    transparent
+    );
+    background-size: 35px 35px;
+  }
+
+  .app-progress-bar-active {
+    @include animation('app-progress-barActive 2s linear infinite');
+  }
+
+  .app-progress-bar-active-right {
+    @include animation('app-progress-barActiveRight 2s linear infinite');
+  }
+
+  @include keyframes('app-progress-barActive') {
+    0% {
+      background-position: 0 0;
+    }
+    100% {
+      background-position: 35px 35px;
+    }
+  }
+
+  @include keyframes('app-progress-barActiveRight') {
+    0% {
+      background-position: 0 0;
+    }
+    100% {
+      background-position: -35px -35px;
+    }
+  }
+}
+
+/* -----------------------------------------------------
+	Progress Bar 1
+-------------------------------------------------------- */
+.progress1 {
+  border-radius: 20px;
+  background-color: $pg-default-bg;
+  box-shadow: inset 0px 1px 3px rgba(0, 0, 0, 0.2);
+  .app-progress-bar-bar {
+    height: 28px;
+  }
+  .app-progress-bar-label {
+    line-height: 28px;
+    font-size: 14px;
+    color: #313541;
+  }
+}
+
+/* -----------------------------------------------------
+	Progress Bar 2
+-------------------------------------------------------- */
+.progress2 {
+  background-color: $pg-default-bg;
+  border-radius: 9px;
+  box-shadow: inset 0px 1px 3px rgba(0, 0, 0, 0.2);
+
+  .app-progress-bar-bar {
+    height: 18px;
+    border-radius: 9px;
+  }
+
+  .app-progress-bar-label {
+    line-height: 18px;
+  }
+}
+
+/* -----------------------------------------------------
+	Progress Bar 3
+-------------------------------------------------------- */
+.progress3 {
+  width: auto !important;
+  padding: 4px;
+  background-color: rgba(0, 0, 0, 0.1);
+  box-shadow: inset 0px 1px 2px rgba(0, 0, 0, 0.2);
+  border-radius: 3px;
+
+  .app-progress-bar-bar {
+    height: 16px;
+    border-radius: 3px;
+  }
+
+  .app-progress-bar-label {
+    line-height: 16px;
+  }
+}
+
+/* -----------------------------------------------------
+	Progress Bar 4
+-------------------------------------------------------- */
+.progress4 {
+  position: relative;
+  width: 100%;
+  background-color: $pg-default-bg;
+
+  &.app-progress-bar-bg {
+    background-color: #bbdefb !important;
+  }
+  &.app-progress-bar-bg-info {
+    background-color: #d1c4e9 !important;
+  }
+  &.app-progress-bar-bg-danger {
+    background-color: #ffcdd2 !important;
+  }
+  &.app-progress-bar-bg-success {
+    background-color: #c8e6c9 !important;
+  }
+  &.app-progress-bar-bg-warning {
+    background-color: #ffecb3 !important;
+  }
+
+  .app-progress-bar-bar {
+    display: block;
+    float: none;
+    width: 0%;
+    height: 4px;
+    background: $bar-default-bg;
+
+    &.app-progress-bar-lg {
+      height: 6px;
+    }
+    &.app-progress-bar-2x {
+      height: 8px;
+    }
+    &.app-progress-bar-3x {
+      height: 10px;
+    }
+    &.app-progress-bar-4x {
+      height: 12px;
+    }
+    &.app-progress-bar-5x {
+      height: 14px;
+    }
+
+    &.app-progress-bar-glow {
+      box-shadow: 5px 0px 15px 0px #3798D9;
+
+      &.app-progress-bar-info {
+        box-shadow: 5px 0px 15px 0px $bar-info-bg;
+      }
+      &.app-progress-bar-danger {
+        box-shadow: 5px 0px 15px 0px $bar-danger-bg;
+      }
+      &.app-progress-bar-success {
+        box-shadow: 5px 0px 15px 0px $bar-success-bg;
+      }
+      &.app-progress-bar-warning {
+        box-shadow: 5px 0px 15px 0px $bar-warning-bg;
+      }
+    }
+
+    &.app-progress-bar-glow-active {
+      @include animation('app-progress-barGlowActive1 3s linear infinite');
+
+      &.app-progress-bar-info {
+        @include animation('app-progress-barGlowActive2 3s linear infinite');
+      }
+      &.app-progress-bar-danger {
+        @include animation('app-progress-barGlowActive3 3s linear infinite');
+      }
+      &.app-progress-bar-success {
+        @include animation('app-progress-barGlowActive4 3s linear infinite');
+      }
+      &.app-progress-bar-warning {
+        @include animation('app-progress-barGlowActive5 3s linear infinite');
+      }
+    }
+  }
+
+  @include app-progress-barGlowActive('app-progress-barGlowActive1', '#3798D9');
+  @include app-progress-barGlowActive('app-progress-barGlowActive2', $bar-info-bg);
+  @include app-progress-barGlowActive('app-progress-barGlowActive3', $bar-danger-bg);
+  @include app-progress-barGlowActive('app-progress-barGlowActive4', $bar-success-bg);
+  @include app-progress-barGlowActive('app-progress-barGlowActive5', $bar-warning-bg);
+}

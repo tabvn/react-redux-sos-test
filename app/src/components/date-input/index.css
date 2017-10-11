@@ -1,0 +1,20 @@
+.app-date-input {
+  text-align: center; }
+  .app-date-input.app-date-input-error .app-label {
+    color: #dc3545; }
+  .app-date-input .app-date-input-inner {
+    margin-top: 10px;
+    display: flex;
+    justify-content: center; }
+    .app-date-input .app-date-input-inner .app-date-input-item input {
+      text-align: center;
+      border: 1px solid rgba(0, 0, 0, 0.12);
+      border-right: 0 none;
+      padding: 5px;
+      max-width: 105px; }
+    .app-date-input .app-date-input-inner .app-date-input-item:last-child input {
+      border-right: 1px solid rgba(0, 0, 0, 0.12); }
+    .app-date-input .app-date-input-inner .app-date-input-item.app-date-input-item-error input {
+      color: #dc3545; }
+
+/*# sourceMappingURL=index.css.map */

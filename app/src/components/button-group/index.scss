@@ -1,0 +1,35 @@
+@import "../../css/variable";
+
+.app-button-group {
+  text-align: center;
+
+  .app-button-group-label {
+    text-transform: uppercase;
+  }
+  &.app-button-group-error {
+    .app-button-group-label {
+      color: $danger-color;
+    }
+  }
+  .app-button-group-inner {
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+    .app-button-group-item {
+      border: 1px solid rgba(0, 0, 0, 0.12);
+      text-transform: uppercase;
+      border-right: 0 none;
+      padding: 5px 10px;
+      cursor: pointer;
+      min-width: 105px;
+      &.app-button-group-item-active {
+        color: #FFFFFF;
+        background: $primary-color;
+        border-color: $primary-color;
+      }
+      &:last-child {
+        border-right: 1px solid rgba(0, 0, 0, 0.12);
+      }
+    }
+  }
+}

@@ -1,0 +1,363 @@
+/* -----------------------------------------------------
+	CSS Progress Bars
+-------------------------------------------------------- */
+.app-progress-bar {
+  width: 100%;
+  margin-bottom: 20px; }
+  .app-progress-bar .progress1,
+  .app-progress-bar .progress2,
+  .app-progress-bar .progress3 {
+    position: relative;
+    overflow: hidden;
+    width: 100%; }
+  .app-progress-bar .app-progress-bar-bar {
+    display: block;
+    float: left;
+    width: 0%;
+    height: 100%;
+    background: #3798d9;
+    box-shadow: inset 0px -1px 2px rgba(0, 0, 0, 0.1);
+    transition: width 0.8s ease-in-out; }
+  .app-progress-bar .app-progress-bar-label {
+    position: absolute;
+    overflow: hidden;
+    left: 0px;
+    right: 0px;
+    color: rgba(0, 0, 0, 0.6);
+    font-size: 12px;
+    text-align: center;
+    text-shadow: 0px 1px rgba(0, 0, 0, 0.3); }
+  .app-progress-bar .app-progress-bar-info {
+    background-color: #9575cd !important; }
+  .app-progress-bar .app-progress-bar-danger {
+    background-color: #ef5350 !important; }
+  .app-progress-bar .app-progress-bar-success {
+    background-color: #19B5FE !important; }
+  .app-progress-bar .app-progress-bar-warning {
+    background-color: #ffb74d !important; }
+  .app-progress-bar .app-progress-bar-right {
+    float: right !important; }
+  .app-progress-bar .app-progress-bar-label-left {
+    margin-left: 10px;
+    text-align: left !important; }
+  .app-progress-bar .app-progress-bar-label-right {
+    margin-right: 10px;
+    text-align: right !important; }
+  .app-progress-bar .app-progress-bar-label2 {
+    display: block;
+    margin: 2px 0;
+    padding: 0 8px;
+    font-size: 0.8em; }
+    .app-progress-bar .app-progress-bar-label2.app-progress-bar-label2-right {
+      text-align: right; }
+    .app-progress-bar .app-progress-bar-label2.app-progress-bar-label2-center {
+      text-align: center; }
+  .app-progress-bar .app-progress-bar-stripes,
+  .app-progress-bar .app-progress-bar-active,
+  .app-progress-bar .app-progress-bar-active-right {
+    background-image: linear-gradient(-45deg, rgba(255, 255, 255, 0.125) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.125) 50%, rgba(255, 255, 255, 0.125) 75%, transparent 75%, transparent);
+    background-size: 35px 35px; }
+  .app-progress-bar .app-progress-bar-active {
+    -webkit-animation: app-progress-barActive 2s linear infinite;
+    -moz-animation: app-progress-barActive 2s linear infinite;
+    -ms-animation: app-progress-barActive 2s linear infinite;
+    -o-animation: app-progress-barActive 2s linear infinite;
+    animation: app-progress-barActive 2s linear infinite; }
+  .app-progress-bar .app-progress-bar-active-right {
+    -webkit-animation: app-progress-barActiveRight 2s linear infinite;
+    -moz-animation: app-progress-barActiveRight 2s linear infinite;
+    -ms-animation: app-progress-barActiveRight 2s linear infinite;
+    -o-animation: app-progress-barActiveRight 2s linear infinite;
+    animation: app-progress-barActiveRight 2s linear infinite; }
+@-webkit-keyframes app-progress-barActive {
+  0% {
+    background-position: 0 0; }
+  100% {
+    background-position: 35px 35px; } }
+@-moz-keyframes app-progress-barActive {
+  0% {
+    background-position: 0 0; }
+  100% {
+    background-position: 35px 35px; } }
+@-ms-keyframes app-progress-barActive {
+  0% {
+    background-position: 0 0; }
+  100% {
+    background-position: 35px 35px; } }
+@-o-keyframes app-progress-barActive {
+  0% {
+    background-position: 0 0; }
+  100% {
+    background-position: 35px 35px; } }
+@keyframes app-progress-barActive {
+  0% {
+    background-position: 0 0; }
+  100% {
+    background-position: 35px 35px; } }
+@-webkit-keyframes app-progress-barActiveRight {
+  0% {
+    background-position: 0 0; }
+  100% {
+    background-position: -35px -35px; } }
+@-moz-keyframes app-progress-barActiveRight {
+  0% {
+    background-position: 0 0; }
+  100% {
+    background-position: -35px -35px; } }
+@-ms-keyframes app-progress-barActiveRight {
+  0% {
+    background-position: 0 0; }
+  100% {
+    background-position: -35px -35px; } }
+@-o-keyframes app-progress-barActiveRight {
+  0% {
+    background-position: 0 0; }
+  100% {
+    background-position: -35px -35px; } }
+@keyframes app-progress-barActiveRight {
+  0% {
+    background-position: 0 0; }
+  100% {
+    background-position: -35px -35px; } }
+/* -----------------------------------------------------
+	Progress Bar 1
+-------------------------------------------------------- */
+.progress1 {
+  border-radius: 20px;
+  background-color: #EEE;
+  box-shadow: inset 0px 1px 3px rgba(0, 0, 0, 0.2); }
+  .progress1 .app-progress-bar-bar {
+    height: 28px; }
+  .progress1 .app-progress-bar-label {
+    line-height: 28px;
+    font-size: 14px;
+    color: #313541; }
+
+/* -----------------------------------------------------
+	Progress Bar 2
+-------------------------------------------------------- */
+.progress2 {
+  background-color: #EEE;
+  border-radius: 9px;
+  box-shadow: inset 0px 1px 3px rgba(0, 0, 0, 0.2); }
+  .progress2 .app-progress-bar-bar {
+    height: 18px;
+    border-radius: 9px; }
+  .progress2 .app-progress-bar-label {
+    line-height: 18px; }
+
+/* -----------------------------------------------------
+	Progress Bar 3
+-------------------------------------------------------- */
+.progress3 {
+  width: auto !important;
+  padding: 4px;
+  background-color: rgba(0, 0, 0, 0.1);
+  box-shadow: inset 0px 1px 2px rgba(0, 0, 0, 0.2);
+  border-radius: 3px; }
+  .progress3 .app-progress-bar-bar {
+    height: 16px;
+    border-radius: 3px; }
+  .progress3 .app-progress-bar-label {
+    line-height: 16px; }
+
+/* -----------------------------------------------------
+	Progress Bar 4
+-------------------------------------------------------- */
+.progress4 {
+  position: relative;
+  width: 100%;
+  background-color: #EEE; }
+  .progress4.app-progress-bar-bg {
+    background-color: #bbdefb !important; }
+  .progress4.app-progress-bar-bg-info {
+    background-color: #d1c4e9 !important; }
+  .progress4.app-progress-bar-bg-danger {
+    background-color: #ffcdd2 !important; }
+  .progress4.app-progress-bar-bg-success {
+    background-color: #c8e6c9 !important; }
+  .progress4.app-progress-bar-bg-warning {
+    background-color: #ffecb3 !important; }
+  .progress4 .app-progress-bar-bar {
+    display: block;
+    float: none;
+    width: 0%;
+    height: 4px;
+    background: #3798d9; }
+    .progress4 .app-progress-bar-bar.app-progress-bar-lg {
+      height: 6px; }
+    .progress4 .app-progress-bar-bar.app-progress-bar-2x {
+      height: 8px; }
+    .progress4 .app-progress-bar-bar.app-progress-bar-3x {
+      height: 10px; }
+    .progress4 .app-progress-bar-bar.app-progress-bar-4x {
+      height: 12px; }
+    .progress4 .app-progress-bar-bar.app-progress-bar-5x {
+      height: 14px; }
+    .progress4 .app-progress-bar-bar.app-progress-bar-glow {
+      box-shadow: 5px 0px 15px 0px #3798D9; }
+      .progress4 .app-progress-bar-bar.app-progress-bar-glow.app-progress-bar-info {
+        box-shadow: 5px 0px 15px 0px #9575cd; }
+      .progress4 .app-progress-bar-bar.app-progress-bar-glow.app-progress-bar-danger {
+        box-shadow: 5px 0px 15px 0px #ef5350; }
+      .progress4 .app-progress-bar-bar.app-progress-bar-glow.app-progress-bar-success {
+        box-shadow: 5px 0px 15px 0px #66bb6a; }
+      .progress4 .app-progress-bar-bar.app-progress-bar-glow.app-progress-bar-warning {
+        box-shadow: 5px 0px 15px 0px #ffb74d; }
+    .progress4 .app-progress-bar-bar.app-progress-bar-glow-active {
+      -webkit-animation: app-progress-barGlowActive1 3s linear infinite;
+      -moz-animation: app-progress-barGlowActive1 3s linear infinite;
+      -ms-animation: app-progress-barGlowActive1 3s linear infinite;
+      -o-animation: app-progress-barGlowActive1 3s linear infinite;
+      animation: app-progress-barGlowActive1 3s linear infinite; }
+      .progress4 .app-progress-bar-bar.app-progress-bar-glow-active.app-progress-bar-info {
+        -webkit-animation: app-progress-barGlowActive2 3s linear infinite;
+        -moz-animation: app-progress-barGlowActive2 3s linear infinite;
+        -ms-animation: app-progress-barGlowActive2 3s linear infinite;
+        -o-animation: app-progress-barGlowActive2 3s linear infinite;
+        animation: app-progress-barGlowActive2 3s linear infinite; }
+      .progress4 .app-progress-bar-bar.app-progress-bar-glow-active.app-progress-bar-danger {
+        -webkit-animation: app-progress-barGlowActive3 3s linear infinite;
+        -moz-animation: app-progress-barGlowActive3 3s linear infinite;
+        -ms-animation: app-progress-barGlowActive3 3s linear infinite;
+        -o-animation: app-progress-barGlowActive3 3s linear infinite;
+        animation: app-progress-barGlowActive3 3s linear infinite; }
+      .progress4 .app-progress-bar-bar.app-progress-bar-glow-active.app-progress-bar-success {
+        -webkit-animation: app-progress-barGlowActive4 3s linear infinite;
+        -moz-animation: app-progress-barGlowActive4 3s linear infinite;
+        -ms-animation: app-progress-barGlowActive4 3s linear infinite;
+        -o-animation: app-progress-barGlowActive4 3s linear infinite;
+        animation: app-progress-barGlowActive4 3s linear infinite; }
+      .progress4 .app-progress-bar-bar.app-progress-bar-glow-active.app-progress-bar-warning {
+        -webkit-animation: app-progress-barGlowActive5 3s linear infinite;
+        -moz-animation: app-progress-barGlowActive5 3s linear infinite;
+        -ms-animation: app-progress-barGlowActive5 3s linear infinite;
+        -o-animation: app-progress-barGlowActive5 3s linear infinite;
+        animation: app-progress-barGlowActive5 3s linear infinite; }
+@-webkit-keyframes app-progress-barGlowActive1 {
+  0%, 100% {
+    box-shadow: 5px 0px 15px 0px #3798D9; }
+  45% {
+    box-shadow: 1px 0px 4px 0px #3798D9; } }
+@-moz-keyframes app-progress-barGlowActive1 {
+  0%, 100% {
+    box-shadow: 5px 0px 15px 0px #3798D9; }
+  45% {
+    box-shadow: 1px 0px 4px 0px #3798D9; } }
+@-ms-keyframes app-progress-barGlowActive1 {
+  0%, 100% {
+    box-shadow: 5px 0px 15px 0px #3798D9; }
+  45% {
+    box-shadow: 1px 0px 4px 0px #3798D9; } }
+@-o-keyframes app-progress-barGlowActive1 {
+  0%, 100% {
+    box-shadow: 5px 0px 15px 0px #3798D9; }
+  45% {
+    box-shadow: 1px 0px 4px 0px #3798D9; } }
+@keyframes app-progress-barGlowActive1 {
+  0%, 100% {
+    box-shadow: 5px 0px 15px 0px #3798D9; }
+  45% {
+    box-shadow: 1px 0px 4px 0px #3798D9; } }
+@-webkit-keyframes app-progress-barGlowActive2 {
+  0%, 100% {
+    box-shadow: 5px 0px 15px 0px #9575cd; }
+  45% {
+    box-shadow: 1px 0px 4px 0px #9575cd; } }
+@-moz-keyframes app-progress-barGlowActive2 {
+  0%, 100% {
+    box-shadow: 5px 0px 15px 0px #9575cd; }
+  45% {
+    box-shadow: 1px 0px 4px 0px #9575cd; } }
+@-ms-keyframes app-progress-barGlowActive2 {
+  0%, 100% {
+    box-shadow: 5px 0px 15px 0px #9575cd; }
+  45% {
+    box-shadow: 1px 0px 4px 0px #9575cd; } }
+@-o-keyframes app-progress-barGlowActive2 {
+  0%, 100% {
+    box-shadow: 5px 0px 15px 0px #9575cd; }
+  45% {
+    box-shadow: 1px 0px 4px 0px #9575cd; } }
+@keyframes app-progress-barGlowActive2 {
+  0%, 100% {
+    box-shadow: 5px 0px 15px 0px #9575cd; }
+  45% {
+    box-shadow: 1px 0px 4px 0px #9575cd; } }
+@-webkit-keyframes app-progress-barGlowActive3 {
+  0%, 100% {
+    box-shadow: 5px 0px 15px 0px #ef5350; }
+  45% {
+    box-shadow: 1px 0px 4px 0px #ef5350; } }
+@-moz-keyframes app-progress-barGlowActive3 {
+  0%, 100% {
+    box-shadow: 5px 0px 15px 0px #ef5350; }
+  45% {
+    box-shadow: 1px 0px 4px 0px #ef5350; } }
+@-ms-keyframes app-progress-barGlowActive3 {
+  0%, 100% {
+    box-shadow: 5px 0px 15px 0px #ef5350; }
+  45% {
+    box-shadow: 1px 0px 4px 0px #ef5350; } }
+@-o-keyframes app-progress-barGlowActive3 {
+  0%, 100% {
+    box-shadow: 5px 0px 15px 0px #ef5350; }
+  45% {
+    box-shadow: 1px 0px 4px 0px #ef5350; } }
+@keyframes app-progress-barGlowActive3 {
+  0%, 100% {
+    box-shadow: 5px 0px 15px 0px #ef5350; }
+  45% {
+    box-shadow: 1px 0px 4px 0px #ef5350; } }
+@-webkit-keyframes app-progress-barGlowActive4 {
+  0%, 100% {
+    box-shadow: 5px 0px 15px 0px #66bb6a; }
+  45% {
+    box-shadow: 1px 0px 4px 0px #66bb6a; } }
+@-moz-keyframes app-progress-barGlowActive4 {
+  0%, 100% {
+    box-shadow: 5px 0px 15px 0px #66bb6a; }
+  45% {
+    box-shadow: 1px 0px 4px 0px #66bb6a; } }
+@-ms-keyframes app-progress-barGlowActive4 {
+  0%, 100% {
+    box-shadow: 5px 0px 15px 0px #66bb6a; }
+  45% {
+    box-shadow: 1px 0px 4px 0px #66bb6a; } }
+@-o-keyframes app-progress-barGlowActive4 {
+  0%, 100% {
+    box-shadow: 5px 0px 15px 0px #66bb6a; }
+  45% {
+    box-shadow: 1px 0px 4px 0px #66bb6a; } }
+@keyframes app-progress-barGlowActive4 {
+  0%, 100% {
+    box-shadow: 5px 0px 15px 0px #66bb6a; }
+  45% {
+    box-shadow: 1px 0px 4px 0px #66bb6a; } }
+@-webkit-keyframes app-progress-barGlowActive5 {
+  0%, 100% {
+    box-shadow: 5px 0px 15px 0px #ffb74d; }
+  45% {
+    box-shadow: 1px 0px 4px 0px #ffb74d; } }
+@-moz-keyframes app-progress-barGlowActive5 {
+  0%, 100% {
+    box-shadow: 5px 0px 15px 0px #ffb74d; }
+  45% {
+    box-shadow: 1px 0px 4px 0px #ffb74d; } }
+@-ms-keyframes app-progress-barGlowActive5 {
+  0%, 100% {
+    box-shadow: 5px 0px 15px 0px #ffb74d; }
+  45% {
+    box-shadow: 1px 0px 4px 0px #ffb74d; } }
+@-o-keyframes app-progress-barGlowActive5 {
+  0%, 100% {
+    box-shadow: 5px 0px 15px 0px #ffb74d; }
+  45% {
+    box-shadow: 1px 0px 4px 0px #ffb74d; } }
+@keyframes app-progress-barGlowActive5 {
+  0%, 100% {
+    box-shadow: 5px 0px 15px 0px #ffb74d; }
+  45% {
+    box-shadow: 1px 0px 4px 0px #ffb74d; } }
+
+/*# sourceMappingURL=index.css.map */

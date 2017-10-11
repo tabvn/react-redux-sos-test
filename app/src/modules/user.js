@@ -2,15 +2,6 @@ export const UPDATE_REGISTER_INFO = 'user/update_register_info'
 
 const initState = {
     registerInfo: {
-        email: {
-            value: 'toan@tabvn.com'
-        },
-        password: {
-            value: 'abc123'
-        },
-        passwordConfirm: {
-            value: 'abc123'
-        },
     },
 };
 
